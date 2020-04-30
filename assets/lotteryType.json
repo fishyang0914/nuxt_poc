@@ -1,0 +1,98 @@
+{   
+    "name": "lotteryType",
+    "title": "彩种介绍",
+    "sub": [
+        { 
+            "title": "产品多样",
+            "mobileTitle": "产品多样",
+            "imgClass": "imgLT1",
+            "iconClass": "iconLT1",
+            "mobileInfo": "适用于桌面型计算机及移动装置",
+            "mobileDesc": "全面支持PC版、HTML5手机版、APP手机版，适用于桌面型电脑及移动装置",
+            "desc": "全面支持PC版、HTML5手机版、APP手机版，适用于桌面型电脑及移动装置，方便玩家随时随地投注。"
+        },
+        { 
+            "title": "彩种最全",
+            "mobileTitle": "彩种最全",
+            "imgClass": "imgLT2",
+            "iconClass": "iconLT2",
+            "mobileInfo": "英国福彩、境内彩等等\n坚持不断开发新彩种",
+            "mobileDesc": "包含有英国福彩系列，境内彩系列等等，并坚持不断开发新彩种。",
+            "desc": "提供时下最热门，最齐全的彩票游戏，包含有英国福彩系列：英国极速彩，英国三分彩，英国五分彩；境内彩系列：重庆时时彩，北京赛车，幸运农场，PC蛋蛋，广东快乐十分，广西快三等等，并坚持不断开发新彩种。"
+        },
+        { 
+            "title": "公平、公正、公开",
+            "mobileTitle": "公平、公正、公开",
+            "imgClass": "imgLT3",
+            "iconClass": "iconLT3",
+            "mobileInfo": "均为国家机构销售彩种",
+            "mobileDesc": "开奖彩种均为国家机构销售彩种，确保公平、公正、公开。",
+            "desc": "开奖彩种均为国家机构销售彩种，确保公平、公正、公开。"
+        },
+        { 
+            "title": "系统所有的彩种",
+            "mobileTitle": "境内彩、英国福彩",
+            "imgClass": "",
+            "iconClass": "iconLT4",
+            "mobileInfo": "提供多样的彩种",
+            "mobileDesc": "",
+            "desc": ""
+        }
+    ],
+    "type": [
+        {
+            "id": "cn",
+            "name": "境内彩",
+            "list": [
+                {
+                    "imgClass": "ssc"
+                },
+                {
+                    "imgClass": "racingcar"
+                },
+                {
+                    "imgClass": "happy"
+                },
+                {
+                    "imgClass": "luckyfarem"
+                },
+                {
+                    "imgClass": "xjssc"
+                },
+                {
+                    "imgClass": "pcegg"
+                },
+                {
+                    "imgClass": "quick3"
+                },
+                {
+                    "imgClass": "elevenpick5"
+                }
+            ]
+        },
+        {
+            "id": "en",
+            "name": "英国福彩",
+            "list": [
+                {
+                    "imgClass": "ukairship"
+                },
+                {
+                    "imgClass": "ukracingcar"
+                },
+                {
+                    "imgClass": "ukssc"
+                },
+                {
+                    "imgClass": "ukspeedcar"
+                },
+                {
+                    "imgClass": "ukspeedssc"
+                },
+                {
+                    "imgClass": "ukhappy"
+                }
+            ]
+        }
+    ]
+}

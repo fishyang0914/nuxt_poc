@@ -1,9 +1,27 @@
 <script>
 import Logo from '~/components/Logo.vue';
+import banner from '~/components/index/banner';
 
 export default {
     components: {
         Logo,
+    },
+    data() {
+        return {
+            name: '首頁',
+        };
+    },
+    head() {
+        return {
+            title: this.name,
+            meta: [
+                {
+                    name: 'description',
+                    hid: 'description',
+                    content: this.name,
+                },
+            ],
+        };
     },
 };
 </script>

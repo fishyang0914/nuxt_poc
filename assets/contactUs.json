@@ -1,0 +1,38 @@
+{
+    "name": "contactUs",
+    "title": "联系我们",
+    "mail": "api88088@outlook.com",
+    "skype": "api88088@outlook.com",
+    "webSite": "hq-api.com",
+    "copyright1": "HQ Technology 版权所有。",
+    "copyright2": "Copyright © 2020 HQ Technology All Rights Reserved",
+    "sub" : [
+        {
+            "title": "企业愿景",
+            "mobileTitle": "",
+            "imgClass": "",
+            "iconClass": "",
+            "mobileInfo": "",
+            "mobileDesc": "",
+            "desc": "用心挖掘大脑深层的创意思维，为经营者创造效益。娱乐平台，立足博彩行业，深耕技术，抓住高速发 展的机会，尽心竭力为用户创造价值。"
+        },
+        {
+            "title": "企业目标",
+            "mobileTitle": "",
+            "imgClass": "",
+            "iconClass": "",
+            "mobileInfo": "",
+            "mobileDesc": "",
+            "desc": "实力让您依托 诚信让您信赖，提供高品质的网站设计，不追求数量优势！作为娱乐平台提供商，我们十分珍视与客户的每一次合作，我们的目标是解决您的技术问题。"
+        },
+        {
+            "title": "客服团队",
+            "mobileTitle": "",
+            "imgClass": "",
+            "iconClass": "",
+            "mobileInfo": "",
+            "mobileDesc": "",
+            "desc": "我们拥有强大的专业客服团队，7x24小时全年无休，无需安装客户端，可以通过skype在线客服交谈,客服人员将为您进行实时答疑。同时客服配备了专业知识，技能以及热忱的服务，我们的团队将确保您的问题得到有效和高效地回答，解决平台一切技术问题，助力商户成长。"
+        }
+    ]
+}

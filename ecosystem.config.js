@@ -5,6 +5,7 @@ module.exports = {
             port: 3002,
             script: './node_modules/nuxt/bin/nuxt.js',
             cwd: './',
+            exec_mode: 'cluster',
             log_date_format: 'YYYY-MM-DD HH:mm Z',
             error_file: './log/err.txt',
             out_file: './log/log.txt',
