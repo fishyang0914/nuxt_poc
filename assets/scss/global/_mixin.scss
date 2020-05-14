@@ -1,0 +1,14 @@
+/*mixin*/
+@function pxToVw_414($px) {
+    @return $px * 100 / 414 + vw;
+}
+@function pxToVw_1920($px) {
+    @return $px * 100 / 1920 + vw;
+}
+@function pxToVw_375($px) {
+    @return $px * 100 / 375 + vw;
+}
+@function pxToVw_1200($px) {
+    @return $px * 100 / 1200 + vw;
+}
+/*mixin*/

@@ -1,52 +1,67 @@
 <script>
-import cooperationService from 'assets/cooperationService.json'
-import lotteryType from 'assets/lotteryType.json'
-import productAdvantage from 'assets/productAdvantage.json'
-import contactUs from 'assets/contactUs.json'
+import cooperationService from 'assets/cooperationService.json';
+import lotteryType from 'assets/lotteryType.json';
+import productAdvantage from 'assets/productAdvantage.json';
+import contactUs from 'assets/contactUs.json';
 export default {
     data() {
         return {
-            navList: [
-                cooperationService,
-                lotteryType,
-                productAdvantage,
-            ],
-            contactUs
-        }
+            navList: [cooperationService, lotteryType, productAdvantage],
+            contactUs,
+        };
     },
-    computed: {
-        
-    },
+    computed: {},
     methods: {
         goTo(name) {
-            this.$router.push({ name })
+            this.$router.push({ name });
         },
     },
-    mounted() {
-
-    }
-}
+    mounted() {},
+};
 </script>
 <template>
     <footer class="footer">
         <nav class="nav">
             <article v-for="(obj, i) in navList" :key="i">
-                <a class="navTitle" @click="goTo(obj.name)">{{obj.title}}</a>
-                <p class="navSubTitle" v-for="(subList, i) in obj.sub" :key="obj.name + i">{{subList.title}}</p>
+                <a class="navTitle" @click="goTo(obj.name)">{{ obj.title }}</a>
+                <p
+                    class="navSubTitle"
+                    v-for="(subList, i) in obj.sub"
+                    :key="obj.name + i"
+                >
+                    {{ subList.title }}
+                </p>
             </article>
             <article>
-                <a class="navTitle" @click="goTo(contactUs.name)">{{contactUs.title}}</a>
-                <a class="navSubTitle mail" :href="`mailto:${contactUs.mail}`">{{contactUs.mail}}</a>
-                <a class="navSubTitle webSite" :href="`http://${contactUs.webSite}`" target="_blank">{{contactUs.webSite}}</a>
-                <a class="navSubTitle skype" :href="`skype:${contactUs.skype}?chat`">{{contactUs.skype}}</a>
+                <a class="navTitle" @click="goTo(contactUs.name)">{{
+                    contactUs.title
+                }}</a>
+                <a
+                    class="navSubTitle mail"
+                    :href="`mailto:${contactUs.mail}`"
+                    >{{ contactUs.mail }}</a
+                >
+                <a
+                    class="navSubTitle webSite"
+                    :href="`http://${contactUs.webSite}`"
+                    target="_blank"
+                    >{{ contactUs.webSite }}</a
+                >
+                <a
+                    class="navSubTitle skype"
+                    :href="`skype:${contactUs.skype}?chat`"
+                    >{{ contactUs.skype }}</a
+                >
             </article>
         </nav>
-        <p class="copyright">{{contactUs.copyright1}}{{contactUs.copyright2}}</p>
-        <p class="mobileCopyright">{{contactUs.copyright1}}</p>
-        <p class="mobileCopyright">{{contactUs.copyright2}}</p>
+        <p class="copyright">
+            {{ contactUs.copyright1 }}{{ contactUs.copyright2 }}
+        </p>
+        <p class="mobileCopyright">{{ contactUs.copyright1 }}</p>
+        <p class="mobileCopyright">{{ contactUs.copyright2 }}</p>
     </footer>
 </template>
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .footer {
     background-color: #051c38;
     margin-left: pxToVw_1920(360);
@@ -102,7 +117,7 @@ export default {
             @media screen and (max-width: 414px) {
                 display: none;
             }
-            &.mail::before{
+            &.mail::before {
                 content: '';
                 display: block;
                 width: 14px;
@@ -115,7 +130,7 @@ export default {
                 background-repeat: no-repeat;
                 background-size: contain;
             }
-            &.webSite::before{
+            &.webSite::before {
                 content: '';
                 display: block;
                 width: 14px;
@@ -128,7 +143,7 @@ export default {
                 background-repeat: no-repeat;
                 background-size: contain;
             }
-            &.skype::before{
+            &.skype::before {
                 content: '';
                 display: block;
                 width: 14px;

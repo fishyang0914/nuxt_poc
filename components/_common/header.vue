@@ -1,5 +1,5 @@
 <script>
-import lib from 'lib'
+import lib from 'lib';
 export default {
     props: {
         isHeaderBg: {
@@ -11,70 +11,89 @@ export default {
         return {
             activeIdx: 0,
             navList: [
-                { name: 'index',                title: '首页',      left: 0 },
-                { name: 'cooperationService',   title: '合作服务',  left: 20 },
-                { name: 'lotteryType',          title: '彩种介绍',  left: 44 },
-                { name: 'productAdvantage',     title: '产品优势',  left: 67 },
-                { name: 'contactUs',            title: '联系我们',  left: 91 },
+                { name: 'index', title: '首页', left: 0 },
+                { name: 'cooperationService', title: '合作服务', left: 20 },
+                { name: 'lotteryType', title: '彩种介绍', left: 44 },
+                { name: 'productAdvantage', title: '产品优势', left: 67 },
+                { name: 'contactUs', title: '联系我们', left: 91 },
             ],
             mobileNavActive: false,
             playUrl: 'http://f1.swhy369888.xyz/',
-        }
+        };
     },
     computed: {
         navBaseLineLeft() {
-            return this.navList[this.activeIdx].left
+            return this.navList[this.activeIdx].left;
         },
     },
     watch: {
         '$route.name'(v) {
-            this.activeIdx = this.navList.map(obj => obj.name).indexOf(this.$route.name)
-        }
+            this.activeIdx = this.navList
+                .map(obj => obj.name)
+                .indexOf(this.$route.name);
+        },
     },
     methods: {
         goTo(idx) {
             // 首頁點擊logo回首頁vue router不會動作，無法觸發往上滾
-            if(idx === 0) document.getElementById('app').scrollTop = 0
-            this.activeIdx = idx
-            this.$router.push({ name: this.navList[idx].name })
+            if (idx === 0) document.getElementById('app').scrollTop = 0;
+            this.activeIdx = idx;
+            this.$router.push({ name: this.navList[idx].name });
         },
         mobileNavOpen() {
-            this.mobileNavActive = true
+            this.mobileNavActive = true;
         },
         mobileNavClose() {
-            this.mobileNavActive = false
+            this.mobileNavActive = false;
         },
         mobileNavClick(idx) {
-            this.mobileNavClose()
-            this.goTo(idx)
-        }
+            this.mobileNavClose();
+            this.goTo(idx);
+        },
     },
     mounted() {
-        this.activeIdx = this.navList.map(obj => obj.name).indexOf(this.$route.name)
-    }
-}
+        this.activeIdx = this.navList
+            .map(obj => obj.name)
+            .indexOf(this.$route.name);
+    },
+};
 </script>
 <template>
-    <header class="header" :class="{headerBg: isHeaderBg}">
+    <header class="header" :class="{ headerBg: isHeaderBg }">
         <a class="logo" @click="mobileNavClick(0)"></a>
         <nav class="nav">
-            <a class="navLink" v-for="(v, i) in navList" :key="i" @click="goTo(i)">{{v.title}}</a>
+            <a
+                class="navLink"
+                v-for="(v, i) in navList"
+                :key="i"
+                @click="goTo(i)"
+                >{{ v.title }}</a
+            >
         </nav>
         <div class="navBase">
-            <div class="navBaseLine" :style="{left: `${navBaseLineLeft}%`}"></div> 
+            <div
+                class="navBaseLine"
+                :style="{ left: `${navBaseLineLeft}%` }"
+            ></div>
         </div>
         <a class="tryIt" :href="playUrl">试玩体验</a>
         <!-- mobile -->
         <a class="mobileNavBtn" @click="mobileNavOpen"></a>
-        <div class="mobileNavSidebar" :class="{active: mobileNavActive}">
+        <div class="mobileNavSidebar" :class="{ active: mobileNavActive }">
             <a class="mobileNavClose" @click="mobileNavClose"></a>
             <div class="mobileNav">
-                <a class="mobileNavLink" v-for="(v, i) in navList" :key="i" @click="mobileNavClick(i)">{{v.title}}</a>
+                <a
+                    class="mobileNavLink"
+                    v-for="(v, i) in navList"
+                    :key="i"
+                    @click="mobileNavClick(i)"
+                    >{{ v.title }}</a
+                >
             </div>
         </div>
     </header>
 </template>
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .header {
     position: absolute;
     z-index: 99;
@@ -183,7 +202,7 @@ export default {
             width: pxToVw_1920(60);
             height: pxToVw_1920(2);
             background-color: #fdc544;
-            transition: left .3s;
+            transition: left 0.3s;
             @media screen and (max-width: 1200px) {
                 width: pxToVw_1200(60);
                 height: pxToVw_1200(2);
@@ -250,7 +269,7 @@ export default {
             z-index: 50;
             top: 0;
             left: 100%;
-            transition: left .3s;
+            transition: left 0.3s;
             &.active {
                 left: 0;
             }
@@ -292,7 +311,6 @@ export default {
                 height: 100%;
             }
             @media screen and (max-width: 375px) {
-
             }
             .mobileNavLink {
                 display: none;
@@ -310,6 +328,6 @@ export default {
                 }
             }
         }
-    }   
+    }
 }
 </style>

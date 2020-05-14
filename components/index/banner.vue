@@ -1,24 +1,19 @@
 <script>
-import Swiper from 'swiper'
-import 'swiper/css/swiper.min.css'
+import Swiper from 'swiper';
+import 'swiper/css/swiper.min.css';
 export default {
     data() {
         return {
-            swiper: null
-        }
+            swiper: null,
+        };
     },
-    computed: {
-
-    },
-    methods: {
-
-    },
+    computed: {},
     mounted() {
         this.swiper = new Swiper('.swiper-container', {
             loop: true, // 無限循環
             grabCursor: true, // 游標為手掌
             autoplay: {
-                disableOnInteraction: false,    // 触碰后自动切换也不会停止
+                disableOnInteraction: false, // 触碰后自动切换也不会停止
             },
             speed: 1000,
             pagination: {
@@ -26,8 +21,9 @@ export default {
                 clickable: true,
             },
         });
-    }
-}
+    },
+    methods: {},
+};
 </script>
 <template>
     <div class="swiper-container">
@@ -40,7 +36,7 @@ export default {
         <div class="swiper-pagination"></div>
     </div>
 </template>
-<style lang='scss'>
+<style lang="scss">
 // 拿掉scoped，才可以覆蓋掉swiper的css
 .swiper-container {
     // 輪播容器寬高度
@@ -59,7 +55,7 @@ export default {
         height: pxToVw_375(410);
     }
 }
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
     width: pxToVw_1920(28);
     height: pxToVw_1920(5);
     background-color: #00a8ad;
@@ -77,11 +73,11 @@ export default {
         height: pxToVw_375(5);
     }
 }
-.swiper-pagination-bullet-active{
-    background: #4BDAD3;
+.swiper-pagination-bullet-active {
+    background: #4bdad3;
 }
 </style>
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .banner {
     background-position: center;
     background-repeat: no-repeat;
@@ -97,21 +93,21 @@ export default {
         height: pxToVw_375(374);
     }
     &.banner1 {
-        background-image: url('~img_banner-1.png');
+        background-image: url('/images/img_banner-1.png');
         @media screen and (max-width: 414px) {
-            background-image: url('~img_banner_mobile-1.png');
+            background-image: url('/images/img_banner_mobile-1.png');
         }
     }
     &.banner2 {
-        background-image: url('~img_banner-2.png');
+        background-image: url('/images/img_banner-2.png');
         @media screen and (max-width: 414px) {
-            background-image: url('~img_banner_mobile-2.png');
+            background-image: url('/images/img_banner_mobile-2.png');
         }
     }
     &.banner3 {
-        background-image: url('~img_banner-3.png');
+        background-image: url('/images/img_banner-3.png');
         @media screen and (max-width: 414px) {
-            background-image: url('~img_banner_mobile-3.png');
+            background-image: url('/images/img_banner_mobile-3.png');
         }
     }
 }

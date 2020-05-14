@@ -12,43 +12,39 @@ export default {
     },
     data() {
         return {
-            isActive: false
-        }
+            isActive: false,
+        };
     },
-    computed: {
-
-    },
-    methods: {
-
-    },
+    computed: {},
+    methods: {},
     mounted() {
         setTimeout(() => {
-            this.isActive = true
-        }, this.delay * 100)
-    }
-}
+            this.isActive = true;
+        }, this.delay * 100);
+    },
+};
 </script>
 <template>
-    <article class="feature" :class="{active: isActive}">
+    <article class="feature" :class="{ active: isActive }">
         <div class="img" :class="feature.imgClass"></div>
         <section class="subFeature">
-            <h3 class="subTitle">{{feature.title}}</h3>
-            <p class="subDesc">{{feature.desc}}</p>
-            <h3 class="mobileSubTitle">{{feature.mobileTitle}}</h3>
-            <p class="mobileSubDesc">{{feature.mobileDesc}}</p>
+            <h3 class="subTitle">{{ feature.title }}</h3>
+            <p class="subDesc">{{ feature.desc }}</p>
+            <h3 class="mobileSubTitle">{{ feature.mobileTitle }}</h3>
+            <p class="mobileSubDesc">{{ feature.mobileDesc }}</p>
         </section>
     </article>
 </template>
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .feature {
     position: relative;
     width: 100%;
-    background-color: rgba(17,68,100, 0.4);
-    transition: opacity .5s;
+    background-color: rgba(17, 68, 100, 0.4);
+    transition: opacity 0.5s;
     opacity: 0;
     left: 0;
     @media screen and (max-width: 414px) {
-        transition: left .5s;
+        transition: left 0.5s;
         opacity: 1;
         left: 100%;
     }
@@ -70,7 +66,7 @@ export default {
             height: pxToVw_1200(226);
         }
         @media screen and (max-width: 414px) {
-            height: pxToVw_414(130);  
+            height: pxToVw_414(130);
             margin-top: pxToVw_414(10);
             top: 0;
             left: -34%;
